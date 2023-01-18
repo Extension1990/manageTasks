@@ -52,7 +52,7 @@ public class TaskController {
 
     // Get task by Assignee
     @GetMapping("/assignee/{assignee}")
-    public List<Task> findTaskUsingAssignee(String assignee) {
+    public List<Task> findTaskUsingAssignee(@PathVariable String assignee) {
         return service.getTaskByAssignee(assignee);
     }
 
