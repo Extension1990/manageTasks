@@ -2,7 +2,7 @@ package com.springboot.restapi.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-// import org.springframework.data.mongodb.core.mapping.Field;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +18,8 @@ public class Task {
     public String taskId;
     private String description;
     private int severity;
+
+    @Field("assignee")
     private String assignee;
     private int storyPoint;
 

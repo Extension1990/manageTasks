@@ -36,7 +36,9 @@ public class TaskService {
 
     // Get task by Assignee
     public List<Task> getTaskByAssignee(String assignee) {
-        return repository.getTasksByAssignee(assignee);
+        List<Task> tasks = repository.findByAssignee(assignee);
+        System.out.println(tasks);
+        return tasks;
     }
 
     // Update task by taskId

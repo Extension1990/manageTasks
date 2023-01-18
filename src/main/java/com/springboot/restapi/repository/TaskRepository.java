@@ -12,7 +12,7 @@ public interface TaskRepository extends MongoRepository<Task, String> {
     List<Task> findBySeverity(int severity);
 
     @Query("{ assignee: ?0 }")
-    List<Task> getTasksByAssignee(String assignee);
+    List<Task> findByAssignee(String assignee);
 
     Task findByTaskId(String taskId);
     
