@@ -11,8 +11,8 @@ public interface TaskRepository extends MongoRepository<Task, String> {
 
     List<Task> findBySeverity(int severity);
 
-    @Query("{ assignee : ?0 }")
-    List<Task> getTaskByAssignee(String assignee);
+    @Query("{ assignee: ?0 }")
+    List<Task> getTasksByAssignee(String assignee);
 
     Task findByTaskId(String taskId);
     

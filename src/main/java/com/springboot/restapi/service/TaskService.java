@@ -36,14 +36,13 @@ public class TaskService {
 
     // Get task by Assignee
     public List<Task> getTaskByAssignee(String assignee) {
-        return repository.getTaskByAssignee(assignee);
+        return repository.getTasksByAssignee(assignee);
     }
 
     // Update task by taskId
-    public Task updateTask(Task taskRequest) {
-
+    public Task updateTask(String taskId, Task taskRequest) {
         // Get existing document from DB
-        Task existingTask = repository.findById(taskRequest.getTaskId()).get();
+        Task existingTask = repository.findById(taskId).get();
 
         // Populate new value from request to existing object/entity/document
         existingTask.setDescription(taskRequest.getDescription());

@@ -57,9 +57,9 @@ public class TaskController {
     }
 
     // Update task by taskId
-    @PutMapping
-    public Task modifyTask(@RequestBody Task task) {
-        return service.updateTask(task);
+    @PutMapping("/{taskId}")
+    public Task modifyTask(@PathVariable String taskId, @RequestBody Task task) {
+        return service.updateTask(taskId, task);
     }
 
     // Delete task by taskId
