@@ -1,7 +1,6 @@
 package com.springboot.restapi.service;
 
 import java.util.List;
-// import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +16,6 @@ public class TaskService {
 
     // Create task
     public Task addTask(Task task) {
-        // task.setTaskId(UUID.randomUUID().toString().split("-")[0]);
         return repository.save(task);
     }
 
