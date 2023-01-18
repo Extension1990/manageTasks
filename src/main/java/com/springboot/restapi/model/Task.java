@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Document("task")
+@Document("tasks")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

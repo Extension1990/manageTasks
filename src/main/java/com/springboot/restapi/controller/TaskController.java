@@ -29,7 +29,6 @@ public class TaskController {
     @ResponseStatus(HttpStatus.CREATED)
     public Task createTask(@RequestBody Task task) {
         Task newTask = service.addTask(task);
-        System.out.println(newTask);
         return newTask;
     }
 
